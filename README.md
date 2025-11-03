@@ -15,7 +15,7 @@ A collection of modern Android apps built with **Kotlin**, **Firebase**, and **M
 * 🔐 **[FileShare Demo](./fileshare.mp4)**
 * 📚 **[Content Sharing Demo](./content.mp4)**
 * 🧩 **[MVVM Firebase Demo](./mvvm.mp4)**
-
+https://github.com/Krut369/STEMpedia/blob/main/content.mp4
 ---
 
 ## 🚀 Projects Overview
