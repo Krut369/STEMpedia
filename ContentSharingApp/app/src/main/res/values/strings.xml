@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ContentSharingApp</string>
+    <!-- Optional: Provide Firebase config here to initialize without google-services.json -->
+    <string name="firebase_api_key"></string>
+    <string name="firebase_app_id"></string>
+    <string name="firebase_project_id"></string>
+    <string name="firebase_storage_bucket"></string>
+    <string name="tile_image">Tile Image</string>
+</resources>

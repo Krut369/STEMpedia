@@ -1,0 +1,47 @@
+  {
+  "project_info": {
+    "project_number": "919091232437",
+    "project_id": "fileshareapp-a5e6e",
+    "storage_bucket": "fileshareapp-a5e6e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919091232437:android:6393a0b454eca5f17708fc",
+        "android_client_info": {
+          "package_name": "com.example.fileshareapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "919091232437-p8rjumemlf7h3nji81kv4eme9unq9a8e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fileshareapp",
+            "certificate_hash": "e66c80999aae6e3353fd60e30fd599c1ecc4b9be"
+          }
+        },
+        {
+          "client_id": "919091232437-k6cee4aq5s8v2tscjhjm5h9ae5u4nsg3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkmbUXgjblvv9EayQwhl4y49tIzSeupDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "919091232437-k6cee4aq5s8v2tscjhjm5h9ae5u4nsg3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

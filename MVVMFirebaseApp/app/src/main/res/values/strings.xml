@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MVVM Firebase App</string>
+    
+    <!-- Login Screen -->
+    <string name="welcome_message">Welcome! Please login to continue</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="register_button">Register</string>
+    
+    <!-- Main Screen -->
+    <string name="items_title">Items</string>
+    <string name="empty_state">No items found</string>
+    <string name="logout">Logout</string>
+    
+    <!-- Messages -->
+    <string name="auth_success">Authentication successful!</string>
+    <string name="loading">Loading…</string>
+</resources>

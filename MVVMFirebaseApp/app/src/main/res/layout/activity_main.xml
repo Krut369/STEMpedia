@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Main Activity Layout
+    This is a simple container activity that hosts the ListFragment.
+    Using FragmentContainerView is the modern way to host fragments in activities.
+-->
+<androidx.fragment.app.FragmentContainerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
+    android:name="com.example.mvvmauth.ui.list.ListFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.list.MainActivity" />
+
