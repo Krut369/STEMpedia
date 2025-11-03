@@ -1,76 +1,96 @@
-FileShare App 🔐
+# 🔐 FileShare App
 
-A simple Android app to upload, share, and view files using Firebase.
+A lightweight **Android application** built with **Kotlin** and **Firebase**, enabling users to **upload**, **share**, and **view files** seamlessly across devices.
 
-✨ Features
+---
 
-🔑 Login / Sign-Up with username & password (Firebase Auth)
+## ✨ Features
 
-☁️ Upload files (images, PDFs, videos, etc.) to Firebase Storage
+* 🔑 **Login / Sign-Up** using Email & Password (Firebase Authentication)
+* ☁️ **Upload Files** — supports images, PDFs, and videos
+* 👁️ **Public / Private Visibility** settings for shared files
+* 📂 **List & Download** uploaded files with real-time sync
+* 🔄 **Firestore Integration** for live updates and metadata tracking
 
-👁️ Public / Private visibility for files
+---
 
-📂 List & Download uploaded files
+## 🧠 How It Works
 
-🔄 Real-time sync with Firebase Firestore
+1. **Login Screen** → User enters email & password → auto-register if new
+2. **Main Screen** → Displays personal uploads and public files
+3. **Upload Flow** → Select a file → choose visibility → upload → auto-save to Firestore
+4. **File Access** → Tap any item to view or download directly
 
-🧠 How It Works
+---
 
-Login Screen: Enter username + password → auto-register new users
+## ⚙️ Firebase Setup
 
-Main Screen: See your files + public files from others
+1. **Enable** Firebase Authentication → *Email/Password*
+2. **Create Firestore Collection** → `files`
+3. **Set Up Firebase Storage** → path: `uploads/{userId}/`
 
-Upload: Choose file → set visibility → upload → auto-save to Firestore
+Each Firestore document structure:
 
-View / Download: Tap to open any file directly
-
-⚙️ Firebase Setup
-
-Authentication: Email/Password enabled
-
-Firestore: Collection → files
-
-Storage: Folder → uploads/{userId}/
-
-Each document:
-
+```json
 {
-"fileName": "sample.pdf",
-"downloadUrl": "...",
-"visibility": "PUBLIC",
-"ownerUid": "user123"
+  "fileName": "sample.pdf",
+  "downloadUrl": "https://firebasestorage.googleapis.com/...",
+  "visibility": "PUBLIC",
+  "ownerUid": "user123"
 }
+```
 
-🧩 Project Structure
+---
+
+## 📂 Project Structure
+
+```
 app/
-├─ MainActivity.kt         # Login + File list UI
-├─ FileShareViewModel.kt   # Handles login, upload, and data
-└─ ui/theme/               # Colors, typography
+├─ MainActivity.kt           # Handles login and file list UI
+├─ FileShareViewModel.kt     # ViewModel for authentication, upload, and Firestore logic
+└─ ui/theme/                 # Colors, typography, and design system
+```
 
-🧰 Key Tools
+---
 
-Kotlin + Jetpack Compose
+## 🧰 Tech Stack
 
-Firebase Auth, Firestore, Storage
+| Component        | Technology                        |
+| ---------------- | --------------------------------- |
+| **Language**     | Kotlin                            |
+| **Architecture** | MVVM (with ViewModel + StateFlow) |
+| **UI Toolkit**   | Jetpack Compose                   |
+| **Backend**      | Firebase Auth, Firestore, Storage |
+| **Async Tools**  | Kotlin Coroutines, StateFlow      |
 
-Coroutines + StateFlow
+---
 
-🚀 Run the App
+## 🚀 Run the App
 
-Add google-services.json to /app
+```bash
+# 1. Add your Firebase config
+Place google-services.json in /app
 
-Sync Gradle
+# 2. Sync Gradle
+Click “Sync Now” in Android Studio
 
-Run the project ▶️
+# 3. Run the app
+▶️ Build and launch on device or emulator
+```
 
-🧑‍💻 Next Steps  
+---
 
-Delete or rename files
+## 🧑‍💻 Future Enhancements
 
-Add search & filters
+* 🗑️ Delete or rename uploaded files
+* 🔍 Search and filter functionality
+* 🖼️ File preview (for images & documents)
+* 🔗 Shareable download links
 
-File preview for images
+---
 
-Share download links
+## ❤️ Built With
 
-Built with ❤️ using Kotlin + Firebase
+**Kotlin + Firebase + Jetpack Compose**
+Clean architecture, real-time updates, and a smooth user experience.
+© 2025 **FileShare App Team**
