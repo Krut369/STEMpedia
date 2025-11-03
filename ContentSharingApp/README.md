@@ -1,74 +1,98 @@
-Content Sharing App
+# 📱 Content Sharing App
 
-An Android app built with Kotlin and Firebase to showcase dynamic educational content tiles, web pages, and YouTube videos in a clean, responsive layout.
+An Android application built with **Kotlin** and **Firebase**, designed to deliver **dynamic educational content tiles**, **web pages**, and **YouTube videos** through a clean, responsive, and engaging layout.
 
-✨ Features
+---
 
-6 dynamic tiles (2×3 grid) fetched from Firebase Firestore
+## ✨ Features
 
-Firebase Storage for media assets
+* 🧩 **6 Dynamic Tiles (2×3 Grid)** loaded from Firestore
+* ☁️ **Firebase Storage Integration** for media and thumbnails
+* 🌐 **WebView Support** for opening content links
+* ▶️ **YouTube Embedding** for video tiles
+* 🧠 **MVVM Architecture** with Repository Pattern
+* 🎨 **Material Design** with responsive landscape UI
 
-WebView integration for web content
+---
 
-YouTube embedding support
+## 🧰 Tech Stack
 
-MVVM architecture with Repository pattern
+| Layer            | Technology                     |
+| :--------------- | :----------------------------- |
+| **Language**     | Kotlin                         |
+| **Architecture** | MVVM                           |
+| **Backend**      | Firebase (Firestore + Storage) |
+| **UI**           | RecyclerView + ViewBinding     |
+| **Min SDK**      | 24 (Android 7.0)               |
 
-Material Design & responsive landscape UI
+---
 
-🧠 Tech Stack
-Layer	Technology
-Language	Kotlin
-Architecture	MVVM
-Backend	Firebase (Firestore + Storage)
-UI	RecyclerView + ViewBinding
-Min SDK	24 (Android 7.0)
-📂 Structure
+## 📂 Project Structure
+
+```
 app/
-├─ model/TileItem.kt
-├─ repository/TileRepository.kt
-├─ viewmodel/MainViewModel.kt
-├─ adapter/TileAdapter.kt
+├─ model/
+│   └─ TileItem.kt
+├─ repository/
+│   └─ TileRepository.kt
+├─ viewmodel/
+│   └─ MainViewModel.kt
+├─ adapter/
+│   └─ TileAdapter.kt
 ├─ MainActivity.kt
 └─ WebViewActivity.kt
+```
 
-⚙️ Firebase Setup
+---
 
-Create Firebase project → add Android app
+## ⚙️ Firebase Setup
 
-Download google-services.json → place in /app
+1. Create a **Firebase Project** → Add your Android app
+2. Download `google-services.json` → place it in `/app`
+3. Enable **Cloud Firestore** and **Firebase Storage**
+4. Create a Firestore collection named **`home_tiles`** with the following fields:
 
-Enable Firestore + Storage
+   ```json
+   {
+     "title": "Intro to AI",
+     "type": "youtube",
+     "targetUrl": "https://example.com",
+     "youtubeId": "mOYN9HlfTgo",
+     "imageUrl": "https://firebasestorage.googleapis.com/...",
+     "order": 1,
+     "visible": true
+   }
+   ```
 
-Create collection home_tiles with fields:
-title, type, targetUrl, youtubeId, imageUrl, order, visible
+---
 
-🚀 Run Instructions
-# Build and run
+## 🚀 Run Instructions
+
+```bash
+# Build and run the app
 ./gradlew installDebug
 
 # Clean build files
 ./gradlew clean
+```
 
-🧩 Core Functionality
+---
 
-Loads tiles dynamically from Firestore
+## 🧩 Core Functionality
 
-Displays images via Glide from Firebase Storage
+* Dynamically loads tiles from **Firestore**
+* Displays tile images using **Glide**
+* Opens **WebView** or **YouTube Player** based on tile type
+* Handles **missing or broken images** gracefully
+* Responsive grid layout optimized for tablets and phones
 
-Opens WebView or YouTube player based on content type
+---
 
-Handles missing/broken images gracefully
+## 🧱 Dependencies
 
-🧰 Dependencies
+* **Firebase Firestore** & **Firebase Storage**
+* **AndroidX RecyclerView**, **Material Components**, **ViewBinding**
+* **Glide** (for image loading)
+* **Kotlin Coroutines** (for background operations)
 
-Firebase Firestore & Storage
-
-AndroidX RecyclerView, Material, ViewBinding
-
-Glide (for image loading)
-
-Kotlin Coroutines
-
-Built with ❤️ using Kotlin + MVVM + Firebase
-© 2025 Content Sharing App Team
+---
